@@ -66,7 +66,7 @@ public class MainApplication : Application
             // You should not init your app in this process.
             return;
         }
-        LeakCanaryXamarin.Install(this);
+        refWatcher = LeakCanaryXamarin.Install(this);
     }
 }
  ```
