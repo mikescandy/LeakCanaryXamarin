@@ -1,6 +1,5 @@
 # LeakCanary
-
-[LeakCanary](https://github.com/square/leakcanary binding for xamarin
+[LeakCanary](https://github.com/square/leakcanary) binding for xamarin
 
 * [Why should I use LeakCanary?](#why-should-i-use-leakcanary)
 * [How do I use it?](#how-do-i-use-it)
