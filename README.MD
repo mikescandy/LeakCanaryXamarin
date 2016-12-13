@@ -38,37 +38,50 @@ It also installs an `ActivityRefWatcher` that automatically detects if an activi
 
 ```cs
 [Application]
-public class ExampleApplication:Application {
+public class MainApplication : Application
+{
+    private RefWatcher refWatcher;
 
-public static RefWatcher GetRefWatcher(Context context) {
-var application = (ExampleApplication) context.ApplicationContext;
-return application.RefWatcher;
-}
+    public static RefWatcher GetRefWatcher(Context context)
+    {
+        var application = (MainApplication)context.ApplicationContext;
+        return application.refWatcher;
+    }
 
-private RefWatcher refWatcher;
 
-public override void OnCreate() {
-base.OnCreate();
-if (LeakCanary.IsInAnalyzerProcess(this)) {
-// This process is dedicated to LeakCanary for heap analysis.
-// You should not init your app in this process.
-return;
+
+    public MainApplication(IntPtr javaReference, JniHandleOwnership transfer)
+        : base(javaReference, transfer)
+    {
+
+    }
+
+
+    public override void OnCreate()
+    {
+        base.OnCreate();
+        if (LeakCanaryXamarin.IsInAnalyzerProcess(this))
+        {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanaryXamarin.Install(this);
+    }
 }
-refWatcher = LeakCanaryXamarin.Install(this);
-}
-}
-```
+ ```
 
 You could use the `RefWatcher` to watch for fragment leaks:
 
 ```cs
-public abstract class BaseFragment : Fragment {
-
-public override void OnDestroy() {
-base.OnDestroy();
-var refWatcher = ExampleApplication.GetRefWatcher(Activity);
-refWatcher.Watch(this);
-}
+public abstract class BaseFragment : Fragment
+{
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+        var refWatcher = MainApplication.GetRefWatcher(Activity);
+        refWatcher.Watch(this);
+    }
 }
 ```
 
