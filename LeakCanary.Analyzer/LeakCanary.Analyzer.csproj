@@ -48,6 +48,7 @@
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
     <None Include="Jars\AboutJars.txt" />
+    <None Include="Additions\Square.LeakCanary.Haha.Perflib.ClassObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
@@ -56,6 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\leakcanary-analyzer-release.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedReferenceJar Include="Jars\haha-2.0.3.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakCanary.Watcher\LeakCanary.Watcher.csproj">
+      <Project>{9EA33C2B-E48E-4CB9-AFFD-ED43F52E1EEA}</Project>
+      <Name>LeakCanary.Watcher</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
