@@ -7,4 +7,58 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+	<attr 
+        path="/api/package[@name='com.squareup.leakcanary']"
+        name="managedName">
+        Square.LeakCanary
+    </attr>
+
+	<attr 
+        path="/api/package[@name='com.squareup.leakcanary.analyzer']"
+        name="managedName">
+        Square.LeakCanary.Analyzer
+    </attr>
+
+	<attr 
+        path="/api/package[@name='com.squareup.haha.perflib']"
+        name="managedName">
+        Square.LeakCanary.Haha.Perflib
+    </attr>
+
+	<!-- 
+	Warning BG8401:
+	Skipping Xamarin.SquareupLeakCanary.AnalysisResult.Failure, due to a duplicate field, method or nested type name.
+	-->
+	<attr 
+	    path="api/package[@name='com.squareup.leakcanary']/class[@name='AnalysisResult']/method[@name='failure']"
+	    name="managedName">
+		CreateFailure
+	</attr>
+
+    <!--
+	Warning BG8401: Skipping Xamarin.SquareupLeakCanary.LeakTraceElement.Type, due to a duplicate field, method or nested type name.
+    -->
+    <attr
+        path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Type']"
+        name="managedName">
+        TypeEnum
+    </attr>
+	<!--
+	Warning BG8401: Skipping Xamarin.SquareupLeakCanary.Holder.Class, due to a duplicate field, method or nested type name.
+	-->
+	<attr
+		path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']"
+		name="managedName">
+        HolderEnum
+    </attr>
+
+	<!--
+	Warning BG8401: Skipping Xamarin.SquareupLeakCanary.HolderEnum.Class, due to a duplicate field, method or nested type name. 
+	-->
+    <attr
+        path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']/field[@name='CLASS']"
+        name="managedName">
+        ClassType
+    </attr>
+	
 </metadata>

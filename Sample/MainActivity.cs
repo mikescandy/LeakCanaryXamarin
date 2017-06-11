@@ -1,5 +1,4 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
 using System.Threading.Tasks;
 using System.Threading;
@@ -19,7 +18,7 @@ namespace Sample
             SetContentView(Resource.Layout.Main);
             var button = FindViewById(Resource.Id.async_task);
             button.Click += async (sender, e) =>
-            {
+            {               
                 await Task.Factory.StartNew(() => Thread.Sleep(5000));
             };
         }

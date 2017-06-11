@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle("LeakCanary.Analyzer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("BSS-ONE")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("(c) Grigorean Valentin")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

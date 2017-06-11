@@ -7,5 +7,14 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
-	<attr path="/api/package[@name='com.squareup.leakcanary']/class[@name='LeakCanary']" name="managedName">LeakCanaryXamarin</attr>
+
+	<attr 
+		path="/api/package[@name='com.squareup.leakcanary']"
+		name="managedName">
+        Square.LeakCanary
+	</attr>
+
+	<attr path="/api/package[@name='com.squareup.leakcanary']/class[@name='LeakCanary']" name="visibility">public</attr>
+
+	<remove-node path="/api/package[@name='com.squareup.leakcanary.internal']"/>
 </metadata>
