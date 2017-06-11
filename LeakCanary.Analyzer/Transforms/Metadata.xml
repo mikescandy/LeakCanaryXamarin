@@ -41,5 +41,30 @@
 	<attr path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']/field[@name='CLASS']" name="managedName">
         ClassType
     </attr>
+    <!--<remove-node path="/api/package[@name='com.squareup.haha.guava.base']" />-->
+    <remove-node path="/api/package[@name='com.squareup.haha.guava.collect']" />
+    <!--<remove-node path="/api/package[@name='com.squareup.haha.perflib']" />
+    <remove-node path="/api/package[@name='com.squareup.haha.perflib.analysis']" />
+    <remove-node path="/api/package[@name='com.squareup.haha.perflib.io']" />-->
+    <remove-node path="/api/package[@name='com.squareup.haha.trove']" />
 
+    <!--
+    Warning CS0108: 'RootType.Name' hides inherited member 'Enum.Name()'. Use the new keyword if hiding was intended. 
+    -->
+    <attr 
+        path="/api/package[@name='com.squareup.haha.perflib']/class[@name='RootType']/method[@name='getName']"
+        name="managedName">
+        EName
+    </attr>
+    <!--
+    Warning CS0108: 'MemoryMappedFileBuffer.Dispose()' hides inherited member 'Object.Dispose()'. Use the new keyword if hiding was intended.
+    -->
+    <attr
+        path="/api/package[@name='com.squareup.haha.perflib.io']/class[@name='MemoryMappedFileBuffer']/method[@name='dispose']"
+        name="managedName">
+        JavaDispose
+    </attr>
+    <!--
+    Warning BG8700: Unknown return type com.squareup.haha.guava.collect.ImmutableList<com.squareup.haha.perflib.Instance> in method GetTopologicalOrdering in managed type Square.LeakCanary.Haha.Perflib.Snapshot.
+    -->
 </metadata>
