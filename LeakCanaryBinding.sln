@@ -1,13 +1,13 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeakCanary.Watcher", "LeakCanary.Watcher\LeakCanary.Watcher.csproj", "{4D972E44-9613-4E27-A80C-30E549DBA55A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeakCanary.Analyzer", "LeakCanary.Analyzer\LeakCanary.Analyzer.csproj", "{4AFFCA0B-1882-47CF-B04B-AF26C6154777}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{029FB1CA-FEA2-442D-BBC5-2CB2B55B1318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeakCanary", "LeakCanary\LeakCanary.csproj", "{CA762416-B6FA-4C84-8FB3-A25BF8A2ADB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeakCanary.Watcher", "LeakCanary.Watcher\LeakCanary.Watcher.csproj", "{9EA33C2B-E48E-4CB9-AFFD-ED43F52E1EEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeakCanary.Analyzer", "LeakCanary.Analyzer\LeakCanary.Analyzer.csproj", "{9BC63D3A-6A82-4417-8091-AE28DF801EAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeakCanary", "LeakCanary\LeakCanary.csproj", "{243BF8E9-3A5E-4A10-A8E9-5A70C40853E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,21 +15,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D972E44-9613-4E27-A80C-30E549DBA55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D972E44-9613-4E27-A80C-30E549DBA55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D972E44-9613-4E27-A80C-30E549DBA55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D972E44-9613-4E27-A80C-30E549DBA55A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AFFCA0B-1882-47CF-B04B-AF26C6154777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AFFCA0B-1882-47CF-B04B-AF26C6154777}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AFFCA0B-1882-47CF-B04B-AF26C6154777}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AFFCA0B-1882-47CF-B04B-AF26C6154777}.Release|Any CPU.Build.0 = Release|Any CPU
 		{029FB1CA-FEA2-442D-BBC5-2CB2B55B1318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{029FB1CA-FEA2-442D-BBC5-2CB2B55B1318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{029FB1CA-FEA2-442D-BBC5-2CB2B55B1318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{029FB1CA-FEA2-442D-BBC5-2CB2B55B1318}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA762416-B6FA-4C84-8FB3-A25BF8A2ADB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA762416-B6FA-4C84-8FB3-A25BF8A2ADB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA762416-B6FA-4C84-8FB3-A25BF8A2ADB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA762416-B6FA-4C84-8FB3-A25BF8A2ADB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA33C2B-E48E-4CB9-AFFD-ED43F52E1EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA33C2B-E48E-4CB9-AFFD-ED43F52E1EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA33C2B-E48E-4CB9-AFFD-ED43F52E1EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA33C2B-E48E-4CB9-AFFD-ED43F52E1EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC63D3A-6A82-4417-8091-AE28DF801EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC63D3A-6A82-4417-8091-AE28DF801EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC63D3A-6A82-4417-8091-AE28DF801EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC63D3A-6A82-4417-8091-AE28DF801EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243BF8E9-3A5E-4A10-A8E9-5A70C40853E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243BF8E9-3A5E-4A10-A8E9-5A70C40853E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243BF8E9-3A5E-4A10-A8E9-5A70C40853E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243BF8E9-3A5E-4A10-A8E9-5A70C40853E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

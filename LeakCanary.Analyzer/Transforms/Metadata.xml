@@ -7,4 +7,64 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+	<attr path="/api/package[@name='com.squareup.leakcanary']" name="managedName">
+        Square.LeakCanary
+    </attr>
+	<attr path="/api/package[@name='com.squareup.leakcanary.analyzer']" name="managedName">
+        Square.LeakCanary.Analyzer
+    </attr>
+	<attr path="/api/package[@name='com.squareup.haha.perflib']" name="managedName">
+        Square.LeakCanary.Haha.Perflib
+    </attr>
+	<!-- 
+	Warning BG8401:
+	Skipping Xamarin.SquareupLeakCanary.AnalysisResult.Failure, due to a duplicate field, method or nested type name.
+	-->
+	<attr path="api/package[@name='com.squareup.leakcanary']/class[@name='AnalysisResult']/method[@name='failure']" name="managedName">
+		CreateFailure
+	</attr>
+	<!--
+	Warning BG8401: Skipping Xamarin.SquareupLeakCanary.LeakTraceElement.Type, due to a duplicate field, method or nested type name.
+    -->
+	<attr path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Type']" name="managedName">
+        TypeEnum
+    </attr>
+	<!--
+	Warning BG8401: Skipping Xamarin.SquareupLeakCanary.Holder.Class, due to a duplicate field, method or nested type name.
+	-->
+	<attr path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']" name="managedName">
+        HolderEnum
+    </attr>
+	<!--
+	Warning BG8401: Skipping Xamarin.SquareupLeakCanary.HolderEnum.Class, due to a duplicate field, method or nested type name. 
+	-->
+	<attr path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']/field[@name='CLASS']" name="managedName">
+        ClassType
+    </attr>
+    <!--<remove-node path="/api/package[@name='com.squareup.haha.guava.base']" />-->
+    <remove-node path="/api/package[@name='com.squareup.haha.guava.collect']" />
+    <!--<remove-node path="/api/package[@name='com.squareup.haha.perflib']" />
+    <remove-node path="/api/package[@name='com.squareup.haha.perflib.analysis']" />
+    <remove-node path="/api/package[@name='com.squareup.haha.perflib.io']" />-->
+    <remove-node path="/api/package[@name='com.squareup.haha.trove']" />
+
+    <!--
+    Warning CS0108: 'RootType.Name' hides inherited member 'Enum.Name()'. Use the new keyword if hiding was intended. 
+    -->
+    <attr 
+        path="/api/package[@name='com.squareup.haha.perflib']/class[@name='RootType']/method[@name='getName']"
+        name="managedName">
+        EName
+    </attr>
+    <!--
+    Warning CS0108: 'MemoryMappedFileBuffer.Dispose()' hides inherited member 'Object.Dispose()'. Use the new keyword if hiding was intended.
+    -->
+    <attr
+        path="/api/package[@name='com.squareup.haha.perflib.io']/class[@name='MemoryMappedFileBuffer']/method[@name='dispose']"
+        name="managedName">
+        JavaDispose
+    </attr>
+    <!--
+    Warning BG8700: Unknown return type com.squareup.haha.guava.collect.ImmutableList<com.squareup.haha.perflib.Instance> in method GetTopologicalOrdering in managed type Square.LeakCanary.Haha.Perflib.Snapshot.
+    -->
 </metadata>

@@ -27,7 +27,7 @@ using System;
 using Android.App;
 using Android.OS;
 using Android.Runtime;
-using Com.Squareup.Leakcanary;
+using Square.LeakCanary;
 
 namespace Sample
 {
@@ -42,20 +42,20 @@ namespace Sample
         public override void OnCreate()
         {
             base.OnCreate();
+            if (LeakCanary.IsInAnalyzerProcess(this))
+                return;
             EnabledStrictMode();
-            LeakCanaryXamarin.Install(this);
+            LeakCanary.Install(this);
         }
 
         private void EnabledStrictMode()
         {
-            if ((int)Build.VERSION.SdkInt >= 9)
-            {
-                StrictMode.SetThreadPolicy(new StrictMode.ThreadPolicy.Builder() //
-                    .DetectAll() //
-                    .PenaltyLog() //
-                    .PenaltyDeath() //
-                    .Build());
-            }
+            StrictMode.SetThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                      .DetectAll()
+                      .PenaltyLog()
+                      .PenaltyDeath()
+                      .Build());
+
         }
     }
 }
